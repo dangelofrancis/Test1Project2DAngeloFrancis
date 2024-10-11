@@ -2,10 +2,12 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <string>
 using namespace std;
 
 int main()
 {
+	string keepGoing = "YES";
 	int choice;
 	double number1;
 	double number2;
@@ -15,7 +17,7 @@ int main()
 	double quotient;
 	int power;
 
-	while (true)
+	while (keepGoing == "YES")
 	{
 			cout << "Calculator Program" << endl << endl;
 			cout << "1. Add" << endl;
@@ -90,6 +92,7 @@ int main()
 			cout << endl << endl << "The result of " << number1 << " raised to the power of " << power << " is " << sum << endl << endl;
 			break;
 		case 6: //quit
+			keepGoing = "NO";
 			break;
 		default: //testing
 			cout << endl << "You entered an invalid number. Enter a number between 1 and 6." << endl << endl;
